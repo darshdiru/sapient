@@ -1,0 +1,85 @@
+.row {
+  display: -ms-flexbox; /* IE10 */
+  display: flex;
+
+  /* flex-wrap: wrap; */
+}
+
+/* Create two unequal columns that sits next to each other */
+/* Sidebar/left column */
+.side {
+  -ms-flex: 30%; /* IE10 */
+  flex: 30%;
+}
+
+/* Main column */
+.main {
+  -ms-flex: 70%; /* IE10 */
+  flex: 70%;
+}
+
+.card-holder {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  align-content: flex-start;
+}
+.card-inner {
+  margin: 10px;
+  padding: 10px;
+  border: 1px solid #ccc;
+  box-shadow: 2px 2px 6px 0px rgba(0, 0, 0, 0.3);
+}
+
+.filter-control {
+  border-bottom: 1px solid;
+  outline: none;
+}
+
+button {
+  background-color: rgb(101, 231, 101);
+  color: black;
+  border-radius: 5px;
+  border: none;
+}
+
+@media screen and (max-width: 700px) {
+  /* .row {
+    flex-direction: column;
+  } */
+  .side {
+    flex: 50% 1;
+  }
+
+  .main {
+    flex: 50% 1;
+  }
+}
+
+@media screen and (min-width: 700px) and (max-width: 1024px) {
+  .side {
+    flex: 22% 1;
+  }
+  .main {
+    flex: 78% 1;
+    justify-content: space-between;
+  }
+}
+
+@media screen and (min-width: 1024px) and (max-width: 1440px) {
+  .side {
+    flex: 15%;
+  }
+  .main {
+    flex: 75%;
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  .row {
+    max-width: 1440px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+}
